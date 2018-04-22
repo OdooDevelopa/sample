@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <record id="sample_category" model="ir.module.category">
+            <field name="name">Sample Category</field>
+            <field name="sequence" eval="1" />
+        </record>
+
+        <record id="sample_groups_admin" model="res.groups">
+            <field name="name">Sample Groups Admin</field>
+            <field name="category_id" ref="sample.sample_category" />
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
+        </record>
+
+        <record id="sample_groups_user" model="res.groups">
+            <field name="name">Sample Groups User</field>
+            <field name="category_id" ref="sample.sample_category" />
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
+        </record>
+
+    </data>
+</odoo>
