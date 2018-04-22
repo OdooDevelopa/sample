@@ -1,1 +1,1 @@
-# sample
+# Odoo Sample Addon
